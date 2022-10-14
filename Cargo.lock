@@ -324,6 +324,17 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "68783febc7782c6c5cb401fbda4de5a9898be1762314da0bb2c10ced61f18b0c"
 
 [[package]]
+name = "litcrypt"
+version = "0.2.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5452e90f49686a335ea7a6472ff22dec9f4da67a357e9f5e97a3aed6760bd641"
+dependencies = [
+ "lazy_static",
+ "proc-macro2",
+ "quote",
+]
+
+[[package]]
 name = "log"
 version = "0.4.17"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -536,6 +547,7 @@ dependencies = [
 name = "rusty-recon-bot"
 version = "0.1.0"
 dependencies = [
+ "litcrypt",
  "reqwest",
  "whoami",
 ]
